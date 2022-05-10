@@ -1,0 +1,44 @@
+Instalar react: 
+ - npx create-react-app mi-nombre-de-app
+ - npm init react-app mi-nombre-de-app
+
+carpeta public:
+-> index.html 
+    -> <div id="root"> </div>
+     dentro de este div se reenderiza toda la app 
+     no debemos tocarlo 
+
+carpeta src: 
+->  index.js :
+
+-> app.js 
+
+npm star: para que comience a correr la app 
+
+React utiliza BABEL 
+
+Webpack: 
+Es un empaquetador de módulos donde su objetivo principal
+es crear un único archivo de JavaScript.
+comunmente se conoce como Module Bundler o Empaquetador de módulos.
+
+Babel:
+Es un traductor de código estable e interpretable que usa React.
+Es una librería que cumple con la función de la transpilación, el cual es un proceso de traducción
+
+
+Ambos dos Webpack y Babel: 
+Son librerías
+presentan los archivos de configuración ocultos luego de ejecutar npm init react-app.
+
+COMPONENTE: 
+una pieza de la interfaz de usuario que permite ser reutilizable
+cumple una funcion determinada y que trabaja de manera aislada.
+Funcion nativa de JavaScript 
+
+
+JSX:
+Es una extensión de JavaScript que sirve para generar bloques
+de código HTML, pero con sentencias de JavaScript.
+
+las clases de css se tienen que llamar className 
