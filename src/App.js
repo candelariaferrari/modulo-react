@@ -6,15 +6,16 @@ import ContenedorPublicidad from './components/contenedorPublicidad';
 
 function App() {
   return (
+    
     <div className="App"  id="wrapper">
       <Sidebar/>
       <ContentWrapper/>
-      <ContenedorPublicidad>
+     {/*  <ContenedorPublicidad>
         <h2>publicidad 1 que puede ser una img </h2>
       </ContenedorPublicidad>
       <ContenedorPublicidad>
         <h2>publicidad 2 que puede ser una video</h2>
-      </ContenedorPublicidad>
+      </ContenedorPublicidad> */}
     </div>
   );
 }
