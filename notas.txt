@@ -42,3 +42,65 @@ Es una extensión de JavaScript que sirve para generar bloques
 de código HTML, pero con sentencias de JavaScript.
 
 las clases de css se tienen que llamar className 
+
+
+PROPS: 
+(propiedades)
+genera piezas 100% reutilizables 
+es un valor que se envia al componente al momento que se lo llama 
+es un objeto literal 
+lo tenemos que pasar al crear el componente: 
+function Hola(props){
+    return(
+        <div>
+            <h1> {props.titulo} </h1>
+        </div>
+    )
+}
+
+en donde vamos a utilizar el componente le damos los valores ej en app.js
+
+<Hola titulo='Hola al mundo, soy un titulo reutilizable' />
+
+
+Metodo Map: 
+itera sobre cada uno de los elementos array y retorna un resultado por cada uno de los elementos.
+necesitamos usar una "key" que va a ser unica y estable para darle un valor unico. es un dato exclusivo de react 
+ function Navbar (props){
+     return (
+         <nav>
+            <ul>
+                {
+                    props.enlaces.map((unEnlace, i) => <li key={unEnlace + i}> {unEnlace} </li>)
+                }
+            </ul>
+         </nav>
+     )
+ }
+
+propTypes: 
+es una manera en la que podemos definir el tipo de dato que se espera recibir 
+para una determinada prop de un componente.
+1) necesitamos instalar un componente 
+    npm install prop-types --save
+2) importarlo en los componentes que necesitemos usarlo 
+    import propTypes from 'prop-types'
+3) antes de exportar el componte le tenemos que asignar un objeto literal, donde le vamos a asignar el nombre de la 
+prop donde le vamos a asignar el tipo de dato 
+    MiComponente.propTypes = {...}
+    Navbar.propTypes ={
+        enlaces: propTypes.array
+    }
+4) podemos usar defaultProps = {...} que nos permite asignar valores por defecto para cada 
+
+Children: 
+Son todos aquellos elementos que son pasados entre sus etiquetas, NO COMO PROPS, Si NO COMO HIJOS
+DEL COMPONENTE.
+
+Styling
+podemos separar los archivos css
+TODOS LOS ESTILOS AFECTAN A TODO EL PROYECTO 
+guardarla en la carpeta public si quiero estilos generales 
+pero tmb lo podemos modularizar, por ej 
+hacer una carpeta para cada componente donde en cada uno tenga su js y css
+
