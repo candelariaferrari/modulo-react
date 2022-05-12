@@ -1,4 +1,4 @@
-import './myStyle.css';
+import '../assets/css/myStyle.css';
 import TituloTabla from './TituloTabla';
 import Fila from './Fila';
 

@@ -1,3 +1,5 @@
+SPA: Single Page Aplication
+
 Instalar react: 
  - npx create-react-app mi-nombre-de-app
  - npm init react-app mi-nombre-de-app
@@ -103,4 +105,5 @@ TODOS LOS ESTILOS AFECTAN A TODO EL PROYECTO
 guardarla en la carpeta public si quiero estilos generales 
 pero tmb lo podemos modularizar, por ej 
 hacer una carpeta para cada componente donde en cada uno tenga su js y css
+
 

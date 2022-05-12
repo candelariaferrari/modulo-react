@@ -1,15 +1,9 @@
 import PropsTypes from 'prop-types';
-import './myStyle.css';
-
-
-
-
+import '../assets/css/myStyle.css';
 
 function Fila(props) {
-
   return (
     <div className="row">
-
       <div className="col-md-4">
       {props.titulo}
       </div>
@@ -20,7 +14,6 @@ function Fila(props) {
       {props.rating}
       </div>
       <div className="col">
-     
         <ul>
         {
          props.genero.map((genero, index) => { 
@@ -29,9 +22,6 @@ function Fila(props) {
           })
         }
         </ul>
-
-       
-      
       </div>
       <div className="col">
       {props.premios}

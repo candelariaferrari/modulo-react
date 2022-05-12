@@ -1,4 +1,4 @@
-import './myStyle.css';
+import '../assets/css/myStyle.css';
 function TituloTabla() {
   return (
     <div className="row">
