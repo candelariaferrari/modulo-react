@@ -1,7 +1,7 @@
 import ContentRowTop from "./ContentRowTop";
 import Footer from "./Footer";
 import TopBar from "./TopBar";
-
+import Tabla from "./Tabla";
 function ContentWrapper() {
   return (
     <div id="content-wrapper" class="d-flex flex-column">
@@ -9,6 +9,7 @@ function ContentWrapper() {
           <TopBar/>
           <ContentRowTop />
         </div>
+        <Tabla/>
         <Footer/>
 
     </div>
