@@ -1,9 +1,9 @@
-import PageFeatures from "./PageFeatures";
+import Gif from "./Gif";
 
 function PageContent() {
   return (
     <div className="container">
-      <PageFeatures/>
+      <Gif/>
     </div>
   );
 }

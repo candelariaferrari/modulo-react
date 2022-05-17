@@ -1,6 +1,4 @@
-import Card from "./Card";
-
-function PageFeatures() {
+function Gif() {
   return (
     <div className="row text-center">
        <div className="col-lg-3 col-md-6 mb-4">
@@ -42,4 +40,4 @@ function PageFeatures() {
   );
 }
 
-export default PageFeatures;
+export default Gif;
