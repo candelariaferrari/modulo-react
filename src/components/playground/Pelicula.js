@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropsTypes from 'prop-types';
 
 //siempre tiene que tener una funcion con el nombre del componente 
@@ -44,6 +44,15 @@ function Pelicula(props) {
 
   );
 }
+
+/* COMPONENTE
+class Pelicula extends Component {
+  render(){
+      return(
+          <img src="../" alt=""/>
+      )
+  }
+} */
 
 Pelicula.defaultProps = { //si no me dan el rating decimos que : 
   rating: "No tiene rating todavia  ",

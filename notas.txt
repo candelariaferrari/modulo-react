@@ -106,4 +106,96 @@ guardarla en la carpeta public si quiero estilos generales
 pero tmb lo podemos modularizar, por ej 
 hacer una carpeta para cada componente donde en cada uno tenga su js y css
 
+Componente Statefull (componentes con estados)
+permiten modificar su informacion interna a traves de eventos. y dejan de ser funciones nativas de javascript y pasan 
+a ser clases que son tipos de datos especial.
+SON TODOS AQUELLOS QUE ALMACENAN DATOS DE MANERA LOCAL, QUE PUEDEN VARIAR A LO LARGO DEL TIEMPO.
 
+- para importarlo es necesario ponerlo entre {} 
+    import React. {Componente} from 'react' 
+- para que sea una clase y no una funcion: debemos usar class y extends 
+    class Nombredelcomponente extends Component {
+        render(){
+            return(
+                <img src="../" alt=""/>
+            )
+        }
+    }
+
+- Para que almacene los datos del valor 
+     class Nombredelcomponente extends Component {
+         constructor(){
+             super();
+             this.state = {
+                 valor: 1,
+             }
+         }
+        render(){
+            return(
+                <h2> { this.state.valor} </h2>
+            )
+        }
+    }
+- metodo setState: actualizaz las propiedades del estado interno del componente que sean escritas dentro de el. 
+    class Nombredelcomponente extends Component {
+         constructor(){
+             super();
+             this.state = {
+                 valor: 1,
+             }
+         }
+         aumentarValor(){ //como
+             this.setState({
+                 valor: this.state.valor + 1
+             })
+         }
+        render(){
+            return(
+                <h2> { this.state.valor} </h2>
+                <button onClick={()=> this.aumentarValor()}> Aumentar </button>
+            )
+        }
+    }
+
+
+Ciclo de vida
+es una serie de estados por el cual pasa el componente a lo largo de su existencia.
+trata de 3 puntos claves de todo componente:
+1 - montaje: componentDidMount
+    solo se ejecuta en el cliente inmediatamente despues de haber renderizado el componente 
+    quedan disponibles lo elementos asociados al componente dentro del dom
+    sirve para llamados asincronicos
+    componentDidMount(){
+    }
+    Solemos utilizar este método para identificar el momento del ciclo vida del
+    componente donde se ha renderizado por primera vez. Tengamos en cuenta
+    que este método solo se ejecuta después de la primera renderización, del
+    lado del usuario, por ende lo veríamos a través de la consola del navegador.
+    Uno de sus usos más comunes es, por ejemplo, encargarse de hacer algún
+    pedido asincrónico (quizás a alguna API) una vez que el componente fue
+    renderizado.
+
+2 - actulizacion: componentDidUpdate
+    se ejecuta cada vez que el componente sufra algún cambio de estado.
+    puede recibir dos parametros
+        - props existentes antes de la actualizacion del componente
+        - el estado previo del componente
+     componentDidUpdate(){
+    }
+    Método que utilizamos para identificar cuando un componente fue
+    actualizado. Es decir, cuando sufrió ciertos cambios que hayamos
+    programado en nuestro proyecto.
+3 - desmontaje: componentWillUnmount
+se invoca antes de destruir un componente
+ componentWillUnmount(){
+    }
+    Método que utilizamos para identificar el momento en que un componente
+    va a dejar de existir. Es decir, no va a volver a ser renderizado. Dentro del
+    método solemos hacer una “limpieza” de cualquier otro método que haya
+    estado utilizando el componente que, de ahora en más, no va a volver a ser
+    renderizado.
+
+INTEGRACION CON LA API 
+Los llamados asyncronos se hacen desde los metodos del componente 
+podemos usar el componentDidMount para llamar a la api cunado recien se renderiza
+y setState dentro del metodo para pasarle al estado anteriormente vacio la informacion de la api 
