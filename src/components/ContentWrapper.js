@@ -5,6 +5,7 @@ import Tabla from "./Tabla";
 
 import Contador from './playground/Contador';
 import Gif from './playground/Gif';
+
 function ContentWrapper() {
   return (
     <div id="content-wrapper" class="d-flex flex-column">
@@ -13,9 +14,14 @@ function ContentWrapper() {
           <ContentRowTop />
         </div>
         <Tabla/>
+       
         <Footer/>
-        <Contador inicial={0}/>
-        <Gif/>
+       {/*  <Contador inicial={0}/>
+        <Gif/> */}
+       
+        
+        
+        
     </div>
 
   );
